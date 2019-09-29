@@ -1,0 +1,42 @@
+{
+    "name": "laravel-notification-channels/routee",
+    "description": "Notification channel for routee.net",
+    "homepage": "https://github.com/laravel-notification-channels/routee",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leonidas Stratigakis",
+            "email": "leo.stratigakis@gmail.com",
+            "homepage": "https://github.com/anheric?tab=repositories",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/notifications": "~5.5 || ~6.0",
+        "illuminate/support": "~5.5 || ~6.0",
+        "nyholm/psr7": "^1.2",
+        "symfony/psr-http-message-bridge": "^1.2"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\Routee\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\Routee\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
