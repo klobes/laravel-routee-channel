@@ -59,7 +59,6 @@ class RouteeApi
     {
         $this->checkToken();
 
-        // send sms
         $response = $this->client->request(
             "GET",
             $this->endpoint . "accounts/me/balance",
@@ -77,7 +76,6 @@ class RouteeApi
     {
         $this->checkToken();
 
-        // send sms
         $response = $this->client->request(
             "GET",
             $this->endpoint . "system/prices",
