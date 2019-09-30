@@ -4,7 +4,12 @@ namespace NotificationChannels\Routee\Exceptions;
 
 class CouldNotSendNotification extends \Exception
 {
-    public static function serviceRespondedWithAnError($code)
+    public static function serviceRespondedWithAnError($message)
+    {
+        return new static($message);
+    }
+
+    public static function serviceRespondedWithAnErrorCode($code)
     {
         $message = "-";
         if ($code == "400001009") {

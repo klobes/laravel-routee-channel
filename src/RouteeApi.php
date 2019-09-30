@@ -31,18 +31,27 @@ class RouteeApi
     public function refreshToken()
     {
         $authClient = new \GuzzleHttp\Client();
-        $response = $authClient->request(
-            "POST",
-            "https://auth.routee.net/oauth/token",
-            [
-                "form_params" => [
-                    "grant_type" => "client_credentials",
-                ],
-                "headers" => [
-                    "authorization" => "Basic " . base64_encode($this->appID . ":" . $this->secret),
+        try {
+            $response = $authClient->request(
+                "POST",
+                "https://auth.routee.net/oauth/token",
+                [
+                    "form_params" => [
+                        "grant_type" => "client_credentials",
+                    ],
+                    "headers" => [
+                        "authorization" => "Basic " . base64_encode($this->appID . ":" . $this->secret),
+                    ]
                 ]
-            ]
-        );
+            );
+        } catch (\GuzzleHttp\Exception\ClientException $e) {
+
+            $response = $e->getResponse();
+            $body = $response->getBody()->getContents();
+            if($body) {
+                throw CouldNotSendNotification::serviceRespondedWithAnError(json_decode($body)->message);
+            }
+        }
 
         $this->authToken = json_decode($response->getBody())->access_token;
         $this->lastAuthTokenCreateTime = time();
@@ -132,7 +141,7 @@ class RouteeApi
                 Invalid value of a field.
             */
             $code = json_decode($body)->code;
-            throw CouldNotSendNotification::serviceRespondedWithAnError($code);
+            throw CouldNotSendNotification::serviceRespondedWithAnErrorCode($code);
 
         } else if ($statusCode === 401){
             // Invalid access token, maybe has expired
