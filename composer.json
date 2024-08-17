@@ -12,31 +12,29 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
-        "guzzlehttp/guzzle": "^6.3",
-        "illuminate/notifications": "^7.0",
-        "illuminate/support": "^7.0",
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^6.3 || ^7.0",
+        "illuminate/notifications": ">=7.0 < 10",
+        "illuminate/support": ">=7.0 < 10",
         "nyholm/psr7": "^1.2",
         "symfony/psr-http-message-bridge": "^1.2"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.5",
-        "phpunit/phpunit": "^5.0"
+        "guzzlehttp/guzzle": "^6.3 || ^7.0",
+        "phpunit/phpunit": ">=7.0 < 10"
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\Routee\\": "src"
+            "Routee\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\Routee\\Test\\": "tests"
+            "Routee\\Test\\": "tests"
         }
     },
-    "scripts": {
-        "test": "vendor/bin/phpunit"
-    },
-    "config": {
-        "sort-packages": true
+   "config": {
+        "lock": false
     }
 }
