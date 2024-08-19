@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Routee;
+namespace Routee;
 
 class RouteeMessage
 {
