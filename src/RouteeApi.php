@@ -1,10 +1,8 @@
 <?php
-
 namespace NotificationChannels\Routee;
 
 use GuzzleHttp\Client;
 use NotificationChannels\Routee\Exceptions\CouldNotSendNotification;
-
 class RouteeApi
 {
 
