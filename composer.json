@@ -1,14 +1,13 @@
 {
-    "name": "anheric/laravel-routee-channel",
+    "name": "klobes/laravel-routee-channel",
     "description": "Notification channel for routee.net",
-    "homepage": "https://github.com/laravel-notification-channels/routee",
+    "homepage": "https://github.com/klobes/laravel-routee-channel",
     "license": "MIT",
     "authors": [
         {
-            "name": "Leonidas Stratigakis",
-            "email": "leo.stratigakis@gmail.com",
-            "homepage": "https://github.com/anheric?tab=repositories",
-          
+            "name": "Klodjan bracja",
+            "email": "klodbrace@gmail.com",
+            "homepage": "https://github.com/klobes?tab=repositories"
         }
     ],
     "require": {
