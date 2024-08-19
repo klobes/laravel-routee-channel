@@ -1,6 +1,6 @@
 # Routee notifications channel for Laravel 5.3+
 
-This package makes it easy to send SMS notifications using [routee.net](https://www.routee.net) with Laravel 5.3+.
+This package makes it easy to send SMS notifications using [routee.net](https://www.routee.net) with Laravel 10.0+.
 
 # Warning!
 Only Routee SMS is implemented at the moment, if you want more channels feel free to write them yourself in RouteeApi or point me to an API wrapper that we can switch to.
@@ -24,16 +24,10 @@ Only Routee SMS is implemented at the moment, if you want more channels feel fre
 Install this package with Composer:
 
 ```bash
-composer require laravel-notification-channels/routee
+composer require klobes/laravel-routee-channel
 ```
 
-The service provider gets loaded automatically. Or you can do this manually:
-```php
-// config/app.php
-'providers' => [
-    ...
-    NotificationChannels\Routee\RouteeServiceProvider::class,
-],
+
 ```
 
 ### Setting up the Routee service
