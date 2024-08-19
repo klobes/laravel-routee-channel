@@ -1,4 +1,4 @@
-# Routee notifications channel for Laravel 5.3+
+# Routee notifications channel for Laravel 10.0+
 
 This package makes it easy to send SMS notifications using [routee.net](https://www.routee.net) with Laravel 10.0+.
 
