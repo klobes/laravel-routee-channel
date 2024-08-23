@@ -24,7 +24,7 @@ Only Routee SMS is implemented at the moment, if you want more channels feel fre
 Install this package with Composer:
 
 ```bash
-composer require klobes/laravel-routee-channel
+composer require klobes/laravel-routee-channel:dev-master
 ```
 
 
