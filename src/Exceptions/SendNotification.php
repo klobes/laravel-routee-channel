@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Routee\Exceptions;
+namespace Routee\Exceptions;
 
 class SendNotification extends \Exception
 {
