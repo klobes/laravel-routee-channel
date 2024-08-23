@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Routee;
+namespace Routee;
 
 use Routee\Exceptions\CouldNotSendNotification;
 use Illuminate\Notifications\Notification;
