@@ -2,7 +2,7 @@
 
 namespace NotificationChannels\Routee;
 
-use NotificationChannels\Routee\Exceptions\CouldNotSendNotification;
+use Routee\Exceptions\CouldNotSendNotification;
 use Illuminate\Notifications\Notification;
 
 class RouteeChannel
